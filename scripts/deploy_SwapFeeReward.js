@@ -225,7 +225,8 @@ async function main() {
     const routerDeployer = network.name === `localhost` ? await impersonateAccount(routerOwnerAddress) : (await ethers.getSigners())[0];
 
     const Router = await ethers.getContractFactory(`BiswapRouter02`, routerDeployer);
-    const router = await Router.attach(`0x3a6d8cA21D1CF76F653A67577FA0D27453350dD8`);
+    // const router = await Router.attach(`0x3a6d8cA21D1CF76F653A67577FA0D27453350dD8`);
+    const router = await Router.attach(`0x140ECe3E81EA384372e89317189E94bF7f30603f`);
 
     console.log(`Deploy swapFeeReward upgradable`);
     const FeeReward = await ethers.getContractFactory(`SwapFeeRewardUpgradeable`, deployer);
