@@ -1,0 +1,42 @@
+{
+  "devDependencies": {
+    "@gazoblock/commonlibrary": "github:gazoblock/commonlibrary",
+    "@nomicfoundation/hardhat-chai-matchers": "^1.0.2",
+    "@nomiclabs/hardhat-ethers": "^2.1.0",
+    "@nomiclabs/hardhat-etherscan": "^3.1.0",
+    "@openzeppelin/contracts": "4.7.x",
+    "@openzeppelin/contracts-upgradeable": "4.7.x",
+    "@openzeppelin/hardhat-upgrades": "1.21.0",
+    "chai": "^4.3.4",
+    "dotenv": "^16.0.1",
+    "ethers": "^5.6.9",
+    "hardhat": "^2.12.1",
+    "hardhat-gas-reporter": "^1.0.4",
+    "mocha": "^10.0.0",
+    "prettier": "^2.3.2",
+    "prettier-plugin-solidity": "^1.0.0-beta.24",
+    "solhint": "^3.3.6"
+  },
+  "prettier": {
+    "overrides": [
+      {
+        "files": "*.sol",
+        "options": {
+          "printWidth": 120,
+          "tabWidth": 4,
+          "useTabs": false,
+          "singleQuote": false,
+          "bracketSpacing": false,
+          "explicitTypes": "preserve"
+        }
+      }
+    ]
+  },
+  "dependencies": {
+    "@nomiclabs/hardhat-waffle": "^2.0.3",
+    "hardhat-interface-generator": "^0.0.6",
+    "remixd": "^0.2.4",
+    "web3": "^1.8.0",
+    "web3-eth": "^1.8.0"
+  }
+}

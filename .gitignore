@@ -1,0 +1,10 @@
+/node_modules/
+/.openzeppelin/
+/artifacts/
+/cache/
+secrets.json
+deployAddresses.json
+.env
+/.idea/
+/deployTestAddresses.json
+.DS_Store
