@@ -8,3 +8,4 @@ deployAddresses.json
 /.idea/
 /deployTestAddresses.json
 .DS_Store
+/storedContracts/

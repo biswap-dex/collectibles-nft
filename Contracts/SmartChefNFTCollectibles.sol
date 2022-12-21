@@ -245,7 +245,7 @@ contract SmartChefNFTCollectibles is Ownable, ReentrancyGuard {
     }
 
     //SCN-01, SFR-02
-    function _withdrawReward(address user) internal { //todo check limit and withdraw overlimit amount
+    function _withdrawReward(address user) internal {
         updatePool();
         uint _stakedAmount = stakedAmount[user];
         if(_stakedAmount == 0){
@@ -304,8 +304,6 @@ contract SmartChefNFTCollectibles is Ownable, ReentrancyGuard {
 
     // Withdraw reward token. EMERGENCY ONLY.
     function emergencyRewardTokenWithdraw() external onlyOwner {
-//        require(address(stakeToken) != _token, "Cant withdraw stake token");
-//        require(IERC20(_token).balanceOf(address(this)) >= _amount, "Not enough balance");
         for(uint i = 0; i < listRewardTokens.length; i++){
             address _token = listRewardTokens[i];
             uint _amount = address(stakeToken) != _token ?
@@ -316,7 +314,7 @@ contract SmartChefNFTCollectibles is Ownable, ReentrancyGuard {
     }
 
     function transferNFTHookReceive(address user, uint tokenId, uint256 level) external {
-        require(msg.sender == address(biswapCollectiblesNFT), "only biswapCollectiblesNFT allowed");
+        require(msg.sender == address(biswapCollectiblesNFT), "Only biswapCollectiblesNFT allowed");
         uint newUserLimit = getUserlimit(user) - nftLimitByLVL[level - 1];
         uint currentUserStake = stakedAmount[user];
         uint tokensToUnstake = newUserLimit < currentUserStake ? currentUserStake - newUserLimit : 0;
