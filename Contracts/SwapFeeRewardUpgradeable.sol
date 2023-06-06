@@ -243,7 +243,8 @@ contract SwapFeeRewardUpgradeable is Initializable, OwnableUpgradeable, Reentran
     }
 
     function getFeeDistribution(address account) public view returns (uint feeDistr) {
-        feeDistr = defaultFeeDistribution - oldSwapFeeReward.feeDistribution(account);
+//        feeDistr = defaultFeeDistribution - oldSwapFeeReward.feeDistribution(account);
+        return 100; // BSW-3734
     }
 
     function swapInfo(

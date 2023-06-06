@@ -1,0 +1,29 @@
+{
+	"CollectiblesChanger": {
+		"address": "0x85311eCaaC316fd1342c163171e19eF94C00F027",
+		"deployer": "0xBAfEFe87d57d4C5187eD9Bd5fab496B38aBDD5FF",
+		"chainId": 56,
+		"storingTime": "Tue, 22 Nov 2022 11:36:26 GMT",
+		"history": [
+			"0x85311eCaaC316fd1342c163171e19eF94C00F027"
+		]
+	},
+	"BiswapCollectiblesNFT": {
+		"address": "0x6650eD9411187b808A526e5fEF6F0DFB0b7591E7",
+		"deployer": "0xBAfEFe87d57d4C5187eD9Bd5fab496B38aBDD5FF",
+		"chainId": 56,
+		"storingTime": "Tue, 22 Nov 2022 11:36:26 GMT",
+		"history": [
+			"0x6650eD9411187b808A526e5fEF6F0DFB0b7591E7"
+		]
+	},
+	"SwapFeeRewardUpgradeable": {
+		"address": "0x785E76678e04aD2aC481fcdbE9064b00Dd8651e3",
+		"deployer": "0xBAfEFe87d57d4C5187eD9Bd5fab496B38aBDD5FF",
+		"chainId": 56,
+		"storingTime": "Tue, 22 Nov 2022 11:36:59 GMT",
+		"history": [
+			"0x785E76678e04aD2aC481fcdbE9064b00Dd8651e3"
+		]
+	}
+}

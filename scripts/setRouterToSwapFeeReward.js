@@ -11,7 +11,6 @@ async function main() {
     console.log(`Change router address`);
     const FeeReward = await ethers.getContractFactory(`SwapFeeRewardUpgradeable`);
     const feeReward = await FeeReward.attach(getFromContractStorage(`SwapFeeRewardUpgradeable`).address)
-
     await feeReward.setRouter(`0x3a6d8cA21D1CF76F653A67577FA0D27453350dD8`)
 
 }
