@@ -67,6 +67,8 @@ contract SwapFeeRewardUpgradeable is Initializable, OwnableUpgradeable, Reentran
     Cashback[] public cashbackPercent; // Cashback percent base 10000 index = level - 1
     address[] public pairsList; //list of pairs with reward
 
+    address public smartRouter;
+
     event Withdraw(address userAddress, uint amount);
     event Rewarded(address account, address input, address output, uint amount, uint quantity);
     event NewRouter(address);
@@ -90,7 +92,7 @@ contract SwapFeeRewardUpgradeable is Initializable, OwnableUpgradeable, Reentran
     event NewCashbackPercent(Cashback[]);
 
     modifier onlyRouter() {
-        require(msg.sender == router, "SwapFeeReward: only router");
+        require(msg.sender == router || msg.sender == smartRouter, "SwapFeeReward: only router or smart router");
         _;
     }
 
@@ -555,9 +557,11 @@ contract SwapFeeRewardUpgradeable is Initializable, OwnableUpgradeable, Reentran
         emit NewOracle(_oracle);
     }
 
-    function setRouter(address _router) public onlyOwner {
+    function setRouter(address _router, address _smartRouter) public onlyOwner {
         require(address(_router) != address(0), "SwapMining: new router is the zero address");
+        require(address(_smartRouter) != address(0), "SwapMining: new router is the zero address");
         router = _router;
+        smartRouter = _smartRouter;
     }
 
     function pairsListLength() public view returns (uint) {
